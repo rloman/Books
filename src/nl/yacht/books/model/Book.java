@@ -14,18 +14,18 @@ public class Book {
     public Book(int pages){
         this.pages = pages;
         bookCounter++;
-//        VATPERCENTAGE = 13.0; //vout
+//        VATPERCENTAGE = 13.0; //error since VATPERCENTAGE is final
     }
 
 
     public void foo() {
         Book b = new Book(45);
-//        this.pages = 101;
+        this.pages = 101; // would be error if pages was final
 
         Book a = new Book(99);
-//        a.pages = 343;
+        a.pages = 343;
 
-//        b.pages = 45;
+        b.pages = 45;
     }
 
     public int getPages() {

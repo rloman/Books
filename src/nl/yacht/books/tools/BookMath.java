@@ -2,7 +2,7 @@ package nl.yacht.books.tools;
 
 public class BookMath {
 
-    public static int max(int first, int ... rest) {
+    public static int max(int first, int ... rest) { // rest is here a vararg
 
        int max = first;
        for(int element: rest) {

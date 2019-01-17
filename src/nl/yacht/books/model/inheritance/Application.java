@@ -19,11 +19,5 @@ public class Application {
         // a2 is here an Animal during compile time (typing) and during runtime a Rabbit!!!
         Animal a2 = new Rabbit();
 
-
-
-
-
-
-
     }
 }

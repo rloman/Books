@@ -14,6 +14,8 @@ public class BookFactory {
                 return new Book(33);
             }
             else {
+				// if come here fail
+				// later we will use enum(s) te prevent this
                 throw new IllegalArgumentException();
             }
         }

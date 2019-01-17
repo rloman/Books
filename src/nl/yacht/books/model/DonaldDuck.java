@@ -1,6 +1,6 @@
 package nl.yacht.books.model;
 
-public class DonaldDuck {
+public class DonaldDuck extends Book {
 
     public void quack() {
         Book b = new Book(44);

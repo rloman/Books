@@ -6,7 +6,7 @@ public class StringBuilderDemo {
         String s = "A";
 
         for(int i = 0;i<1000;i++) {
-            s += i;
+            s += i; // bad practice to add some to a String IN A LOOP
         }
 
         // I made 1000 String which of only one is now usable, the rest is eligible for GC
