@@ -12,9 +12,9 @@ public class Application {
 
         System.out.println(Math.pow(2,3));
 
-        System.out.println(Math.random() * 1000);
+        System.out.println(Math.random() * 1000); // WARNING: Always results to 0 (zero)
 
-        int myRandom = (int) (Math.random() * 2000);
+        int myRandom = (int) (Math.random() * 2000); // THIs is good
 
         System.out.println(myRandom);
 
