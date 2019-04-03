@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 public class Tree implements Iterable<Integer>{
 
-    private Integer value;
+     private Integer value;
 
      private Tree left;
      private Tree right;
