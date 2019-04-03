@@ -45,5 +45,14 @@ public class Tree {
         }
     }
 
+    public int sum() {
+        if(this.value == null) {
+            return 0;
+        }
+        else {
+            return this.value + left.sum()+right.sum();
+        }
+    }
+
 
 }

@@ -12,5 +12,6 @@ public class Application {
         tree.pp();
 
         System.out.println(tree.size());
+        System.out.println("Should be: 18 and is:"+tree.sum());
     }
 }
