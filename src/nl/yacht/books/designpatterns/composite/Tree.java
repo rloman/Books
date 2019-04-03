@@ -4,10 +4,10 @@ import java.util.Iterator;
 
 public class Tree implements Iterable<Integer>{
 
-    public Integer value;
+    private Integer value;
 
-     public Tree left;
-     public Tree right;
+     private Tree left;
+     private Tree right;
 
 
     public void add(int value) {
