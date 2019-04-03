@@ -3,12 +3,22 @@ package nl.yacht.books.designpatterns.visitor;
 public class Application {
 
     public static void main(String[] args) {
-        FruitBasket b = new FruitBasket();
+        FruitBasket basket = new FruitBasket();
+
+
         Fruit pear = new Pear();
-        b.add(pear);
+        basket.add(pear);
+
+        basket.add(new Apple());
+
+        basket.add(new Pineapple());
+
+        basket.add(new Apple());
+
+        basket.add(new Pear());
 
         Visitor countingVisitor = new FruitCountingVisitor();
-        b.accept(countingVisitor);
+        basket.accept(countingVisitor);
 
         System.out.println(countingVisitor);
     }

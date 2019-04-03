@@ -2,7 +2,9 @@ package nl.yacht.books.designpatterns.visitor;
 
 public class FruitCountingVisitor implements Visitor {
 
+    private int apples;
     private int pears;
+    private int pineApples;
 
     @Override
     public void visit(Pear pear) {
@@ -18,9 +20,21 @@ public class FruitCountingVisitor implements Visitor {
     }
 
     @Override
+    public void visit(Apple apple) {
+        this.apples++;
+    }
+
+    @Override
+    public void visit(Pineapple pineapple) {
+        this.pineApples++;
+    }
+
+    @Override
     public String toString() {
         return "FruitCountingVisitor{" +
-                "pears=" + pears +
+                "apples=" + apples +
+                ", pears=" + pears +
+                ", pineApples=" + pineApples +
                 '}';
     }
 }

@@ -16,7 +16,7 @@ public class FruitBasket extends Fruit {
     }
 
     @Override
-    public void accept(Visitor v) {
-        v.visit(this);
+    public void accept(Visitor visitor) {
+        visitor.visit(this);
     }
 }
