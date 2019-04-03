@@ -1,11 +1,15 @@
 package nl.yacht.books.designpatterns.composite;
 
-public class Tree {
+import nl.yacht.books.designpatterns.composite.iterator.TreeIterator;
 
-    private Integer value;
+import java.util.Iterator;
 
-    private Tree left;
-    private Tree right;
+public class Tree implements Iterable<Integer>{
+
+    public Integer value;
+
+     public Tree left;
+     public Tree right;
 
 
     public void add(int value) {
@@ -55,4 +59,8 @@ public class Tree {
     }
 
 
+    @Override
+    public Iterator<Integer> iterator() {
+       return new TreeIterator(this);
+    }
 }
