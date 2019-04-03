@@ -1,7 +1,5 @@
 package nl.yacht.books.designpatterns.composite;
 
-import nl.yacht.books.designpatterns.composite.iterator.TreeIterator;
-
 import java.util.Iterator;
 
 public class Tree implements Iterable<Integer>{
@@ -63,4 +61,29 @@ public class Tree implements Iterable<Integer>{
     public Iterator<Integer> iterator() {
        return new TreeIterator(this);
     }
+
+    private class TreeIterator implements Iterator<Integer> {
+
+        private Tree tree;
+
+        public TreeIterator(Tree tree) {
+            this.tree = tree;
+        }
+
+
+        @Override
+        public boolean hasNext() {
+            return tree.right != null;
+        }
+
+        @Override
+        public Integer next() {
+            int result = this.tree.value;
+
+            this.tree = this.tree.right;
+
+            return result;
+        }
+    }
+
 }
