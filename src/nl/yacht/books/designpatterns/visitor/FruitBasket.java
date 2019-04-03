@@ -1,9 +1,10 @@
 package nl.yacht.books.designpatterns.visitor;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
-public class FruitBasket extends Fruit {
+public class FruitBasket extends Fruit implements Iterable<Fruit> {
 
     private List<Fruit> fruitsInBasket = new ArrayList<>();
 
@@ -11,12 +12,13 @@ public class FruitBasket extends Fruit {
         return fruitsInBasket.add(fruit);
     }
 
-    public List<Fruit> getFruitsInBasket() {
-        return fruitsInBasket;
-    }
-
     @Override
     public void accept(Visitor visitor) {
         visitor.visit(this);
+    }
+
+    @Override
+    public Iterator<Fruit> iterator() {
+       return fruitsInBasket.iterator();
     }
 }

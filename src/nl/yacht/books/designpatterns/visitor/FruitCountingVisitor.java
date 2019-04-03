@@ -14,7 +14,7 @@ public class FruitCountingVisitor implements Visitor {
     @Override
     public void visit(FruitBasket fruitBasket) {
 
-        for(Fruit element: fruitBasket.getFruitsInBasket()) {
+        for(Fruit element: fruitBasket) {
             element.accept(this);
         }
     }
