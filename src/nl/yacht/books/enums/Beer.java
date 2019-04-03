@@ -37,7 +37,7 @@ class BeerDrinker {
 
 class BelgiumBeerDrinker extends BeerDrinker {
 
-    // vout
+    // error since foo is final in parent class
 //    public void foo() {
 
 //    }
