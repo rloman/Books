@@ -26,7 +26,7 @@ class BeerDrinker {
     }
 
     public void bar() {
-//        this.value++;
+//        this.value++; // error
     }
 
     public final void foo() {
@@ -38,7 +38,7 @@ class BeerDrinker {
 class BelgiumBeerDrinker extends BeerDrinker {
 
     // error since foo is final in parent class
-//    public void foo() {
+//    public void foo() { // unable to override
 
 //    }
 
