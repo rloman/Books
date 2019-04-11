@@ -2,19 +2,29 @@ package nl.yacht.books.model;
 
 public class Book {
 
-    private int pages;
-    private double price;
-
-    protected double rating;
-
-    public static int bookCounter = 0;
+	public static int bookCounter = 0;
 
     public static final double VATPERCENTAGE = 9.0;
 
+
+    private int pages;
+    private double price;
+    private String title;
+    protected double rating;
+
+    
     public Book(int pages){
         this.pages = pages;
         bookCounter++;
 //        VATPERCENTAGE = 13.0; //error since VATPERCENTAGE is final
+    }
+
+ public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
 
